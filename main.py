@@ -7,7 +7,7 @@ import os
 # ------------------ CONFIG ------------------
 API_ID = 22959128
 API_HASH = "d9947be127cccae84fc586920d507183"
-BOT_TOKEN = "7106861798:AAHnPeO4R9_TRGT2vxT3euw3Xto2edz64pI"
+BOT_TOKEN = "6282720780:AAEnFf_NduuGXCaCKfa7-GpdFHaAvHugUCc"
 ADMIN_ID = -1001942149963
 
 BOT_URLS = [
