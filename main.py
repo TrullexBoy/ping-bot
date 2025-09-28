@@ -66,13 +66,11 @@ async def status(_, message):
 
 # ------------------ RUN ------------------
 if __name__ == "__main__":
-    # Pyrogram 2.x compatible run without asyncio.run()
     async def runner():
         async with app:
             app.loop.create_task(monitor_bots())
             print("🤖 Uptime Monitor Bot is running...")
-            await app.idle()
+            # replacement for app.idle() in v2.x
+            await asyncio.Event().wait()  
 
-    # Get current running loop (Render / Python 3.10 friendly)
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(runner())
+    asyncio.run(runner())
