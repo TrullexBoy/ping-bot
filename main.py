@@ -5,9 +5,9 @@ import aiohttp
 import os
 
 # ------------------ CONFIG ------------------
-API_ID = int(os.getenv("API_ID"))  # Telegram API ID
-API_HASH = os.getenv("API_HASH")   # Telegram API Hash
-BOT_TOKEN = os.getenv("BOT_TOKEN") # Telegram Bot Token
+API_ID = 22959128 #int(os.getenv("API_ID"))  # Telegram API ID
+API_HASH = "d9947be127cccae84fc586920d507183"# os.getenv("API_HASH")   # Telegram API Hash
+BOT_TOKEN = "7106861798:AAHnPeO4R9_TRGT2vxT3euw3Xto2edz64pI" # os.getenv("BOT_TOKEN") # Telegram Bot Token
 ADMIN_ID = int(os.getenv("ADMIN_ID"))  # Aapka Telegram ID jahan alerts bhejna hai
 
 # List of bot URLs to monitor
