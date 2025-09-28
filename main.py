@@ -12,8 +12,8 @@ ADMIN_ID = -1001942149963 #int(os.getenv("ADMIN_ID"))  # Aapka Telegram ID jahan
 
 # List of bot URLs to monitor
 BOT_URLS = [
-    "https://yourbot1.onrender.com",
-    "https://yourbot2.onrender.com"
+    "https://webxzonebot.onrender.com",
+    "https://the-cloner-boy.onrender.com"
 ]
 
 PING_INTERVAL = 120  # in seconds (2 min)
@@ -44,7 +44,7 @@ async def monitor_bots():
 async def start(_, message):
     await message.reply("🤖 Uptime Monitor Bot is running!")
 
-@app.on_message(filters.command("status") & filters.private)
+@app.on_message(filters.command("status"))
 async def status(_, message):
     reply_text = "🤖 Bot Status:\n\n"
     async with aiohttp.ClientSession() as session:
