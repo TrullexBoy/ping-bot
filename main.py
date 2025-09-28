@@ -9,7 +9,7 @@ from pyrogram import Client, filters, idle
 # ------------------ CONFIG (use env in production) ------------------
 API_ID = int(os.environ.get("API_ID", "22959128"))
 API_HASH = os.environ.get("API_HASH", "d9947be127cccae84fc586920d507183")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "6282720780:AAEnFf_NduuGXCaCKfa7-GpdFHaAvHugUCc")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "7106861798:AAFoEklFsweMdJTFnUVZLKWsE4YgLCcoSHU")
 ADMIN_ID = int(os.environ.get("ADMIN_ID", "-1001942149963"))
 
 # List of bot URLs to monitor
