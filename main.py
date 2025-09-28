@@ -44,6 +44,21 @@ async def monitor_bots():
 async def start(_, message):
     await message.reply("🤖 Uptime Monitor Bot is running!")
 
+@app.on_message(filters.command("status") & filters.private)
+async def status(_, message):
+    reply_text = "🤖 Bot Status:\n\n"
+    async with aiohttp.ClientSession() as session:
+        for url in BOT_URLS:
+            try:
+                async with session.get(url) as resp:
+                    if resp.status == 200:
+                        reply_text += f"✅ {url} is UP\n"
+                    else:
+                        reply_text += f"⚠️ {url} is DOWN (Status: {resp.status})\n"
+            except Exception as e:
+                reply_text += f"❌ {url} is DOWN (Error: {e})\n"
+    await message.reply(reply_text)
+
 async def main():
     async with app:
         await monitor_bots()  # start monitoring
